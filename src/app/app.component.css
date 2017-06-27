@@ -1,0 +1,121 @@
+h1 {
+    height: 55px;
+    max-height: 55px;
+    line-height: 55px;
+    padding-left: 20px;
+}
+
+.item {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 98px;
+}
+
+.start {
+    left: 0px;
+    color: rgba(34, 102, 153, 1);
+    width: 98px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.end {
+    left: calc(100% - 200px);
+    color: white;
+    width: 200px;
+    border-radius: 0px;
+    background-color: rgba(34, 102, 153, 1);
+}
+
+.top {
+    top: 0px;
+    left: 300px;
+    color: rgba(34, 102, 153, 1);
+    width: 98px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.down {
+    left: 300px;
+    top: calc(100% - 200px);
+    color: white;
+    height: 196px;
+    width: 98px;
+    border-radius: 0px;
+    background-color: rgba(34, 102, 153, 1);
+    z-index: 10;
+}
+
+.linear {
+    transition: 1s all linear;
+}
+
+.ease {
+    transition: 1s all ease;
+}
+
+.ease-in {
+    transition: 1s all ease-in;
+}
+
+.ease-out {
+    transition: 1s all ease-out;
+}
+
+.ease-in-out {
+    transition: 1s all ease-in-out;
+}
+
+.container {
+    position: relative;
+    margin: 2px 0px;
+    left: 0px;
+    width: 100%;
+    height: 98px;
+    border: none;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.container:hover {
+    border: none;
+    background-color: rgba(255, 255, 255, .6);
+}
+
+.scene {
+    animation: myFrames 5s ease 2s infinite alternate;
+    position: absolute;
+}
+
+.initial {
+    color: rgba(34, 102, 153, 1);
+    width: 98px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+@keyframes myFrames {
+    0% {
+        top: 100px;
+        left: 0px;
+    }
+    25% {
+        left: 600px;
+        top: 100px;
+    }
+    50% {
+        left: 600px;
+        top: 300px;
+    }
+    75% {
+        left: 400px;
+        top: 300px;
+    }
+    100% {
+        left: 400px;
+        top: 100px;
+    }
+}

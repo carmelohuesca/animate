@@ -1,0 +1,35 @@
+<div class="gradient-pattern">
+    <h1 (click)="auto()">
+        Transiciones CSS
+    </h1>
+    <div (click)="toggle()" class="container">
+        <div class="item start" [ngClass]="{'start':start, 'end':end}">{{start}}</div>
+    </div>
+    <div (click)="toggle()" class="container">
+        <div class="item start linear" [ngClass]="{'start':start, 'end':end}">linear</div>
+    </div>
+    <div (click)="toggle()" class="container">
+        <div class="item start ease-in" [ngClass]="{'start':start, 'end':end}">ease-in</div>
+    </div>
+    <div (click)="toggle()" class="container">
+        <div class="item start ease-out" [ngClass]="{'start':start, 'end':end}">ease-out</div>
+    </div>
+    <div (click)="toggle()" class="container">
+        <div class="item start ease" [ngClass]="{'start':start, 'end':end}">ease</div>
+    </div>
+    <div (click)="toggle()" class="container">
+        <div class="item start ease-in-out" [ngClass]="{'start':start, 'end':end}">ease-in-out</div>
+    </div>
+    <div #container>
+        <template #clone>
+        <div class="item initial scene">scene</div>
+        </template>
+    </div>
+    <div class="item top" [ngClass]="{'top':start, 'down':end}">{{end}}</div>
+    <div class="item top linear" style="left:400px" [ngClass]="{'top':start, 'down':end}">linear</div>
+    <div class="item top ease-in" style="left:500px" [ngClass]="{'top':start, 'down':end}">ease-in</div>
+    <div class="item top ease-out" style="left:600px" [ngClass]="{'top':start, 'down':end}">ease-out</div>
+    <div class="item top ease" style="left:700px" [ngClass]="{'top':start, 'down':end}">ease</div>
+    <div class="item top ease-in-out" style="left:800px" [ngClass]="{'top':start, 'down':end}">ease-in-out</div>
+
+</div>
